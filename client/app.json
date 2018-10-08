@@ -1,0 +1,65 @@
+ {
+  "pages": [ 
+    "pages/orderLess/orderLess",
+    "pages/audio/audio", 
+    "pages/demoOverflow/demoOverflow",  
+     
+    "pages/mine/mine", 
+    "pages/audio/post-detail/post-detail", 
+    "pages/productDetail/productDetail",
+    "pages/posts/post",   
+    "pages/aaaaaindex/aaaa",
+    "pages/posts/post-detail/post-detail",
+    "pages/index/index",
+    "pages/addCgi/addCgi",
+    "pages/movie/movie" 
+  ],
+  "window": {
+    "backgroundColor": "#000000",
+    "backgroundTextStyle": "white",
+    "navigationBarBackgroundColor": "#000000",
+    "navigationBarTitleText": "SUPERMONKEY",
+    "navigationBarTextStyle": "white"
+  },
+  "tabBar": {
+    "backgroundColor":"#171717",
+    "selectedColor":"#f9ed03",
+    "list": [ 
+      {
+        "pagePath": "pages/orderLess/orderLess",
+        "text": "我的预约", 
+        "iconPath": "./static/img/3.png", 
+        "selectedIconPath": "./static/img/3S.png"
+      },
+      {
+        "pagePath": "pages/aaaaaindex/aaaa",
+        "text": "猩店", 
+        "iconPath": "./static/img/1.png", 
+        "selectedIconPath": "./static/img/1S.png"
+      },
+      {
+        "pagePath": "pages/posts/post",
+        "text": "课程",
+        "iconPath": "./static/img/2.png", 
+        "selectedIconPath": "./static/img/2S.png"
+      },
+      
+      {
+        "pagePath":"pages/mine/mine",
+        "text": "超猩卡", 
+        "iconPath": "./static/img/4.png", 
+        "selectedIconPath": "./static/img/4S.png"
+      },
+      {
+        "pagePath":"pages/demoOverflow/demoOverflow",
+        "text": "微企宝", 
+        "iconPath": "./static/img/4.png", 
+        "selectedIconPath": "./static/img/4S.png"
+      }
+    ]
+  },
+  "networkTimeout": {
+    "request": 10000,
+    "downloadFile": 10000
+  }
+}

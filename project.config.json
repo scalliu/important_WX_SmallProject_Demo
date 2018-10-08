@@ -1,0 +1,28 @@
+{
+	"miniprogramRoot": "client/",
+	"qcloudRoot": "server/",
+	"setting": {
+		"urlCheck": false,
+		"es6": true,
+		"postcss": true,
+		"minified": true,
+		"newFeature": true
+	},
+	"appid": "wx198fadcb0eda943c",
+	"projectname": "1",
+	"libVersion": "2.3.0",
+	"scripts": {
+		"beforeCompile": "",
+		"beforePreview": "",
+		"beforeUpload": ""
+	},
+	"packOptions": {
+		"ignore": [
+			{
+				"type": "file",
+				"value": "static/.gitkeep"
+			}
+		]
+	},
+	"condition": {}
+}

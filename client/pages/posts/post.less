@@ -1,0 +1,222 @@
+@import "post-item/post-item-template.wxss";
+ 
+
+swiper {
+  width: 100%;
+  height: 190rpx;
+}
+
+/*less sass*/
+
+swiper image {
+  width: 100%;
+  height: 100%;
+}
+
+
+.demo-container {
+  width: 50vw;
+  height: 100vh; 
+}
+
+ /* 重置插件ui样式, 否则无法置顶无法显示2行 */
+.post .i-sticky-item-ab{
+   height:auto!important; 
+ }
+ 
+ 
+
+   
+.toggleWrap { 
+  display: flex;
+  overflow: hidden; 
+  /* background: black;  */
+}
+
+.toggleLeft {
+  flex: 1 1 auto;
+  width: 50%;  
+}
+
+.toggleLeft .px1px {
+  height: 52rpx;
+  width: 1px;
+  background: #3a3a3a;
+  background-clip: content-box;
+  margin-top: 19rpx;
+  float: right;
+}
+
+.toggleLeft .toggleLeftReset,
+.toggleRight .toggleRightReset {
+  
+  margin: 0;
+  padding: 0;
+  height: inherit !important;
+  line-height: inherit !important;
+  background-color: black !important;
+  font-size: 26rpx;
+}
+
+.toggleWrap .toggle-icon {
+  width: 30rpx;
+  margin-left: 20rpx;
+  height: 18rpx;
+  display: inline-block;
+  background-size: cover;
+  background-position: center center no-repeat;
+}
+
+.toggleRight {
+  background: black;
+  width: 50%;
+}
+
+.drawer-header {
+  font-size: 30rpx;
+  color: white;
+  background: #2d3030;
+  height: 7.5vh;
+  line-height: 7.5vh;
+}
+
+.drawer-icon {
+  margin-left: 22rpx;
+  margin-right: 15rpx;
+  background-size: 100%;
+  background-position: center;
+  width: 44rpx;
+  display: inline-block;
+  height: 44rpx;
+  vertical-align: middle;
+}
+
+.drawer-left view,
+.drawer-right view {
+  text-align: center;
+  font-size: 26rpx;
+  height: 96rpx;
+  line-height: 96rpx;
+}
+
+.drawer-left {
+  height: 92.5vh;
+  float: left;
+  width: 35%;
+  background: #262929;
+  color: #8a8e92;
+}
+
+.drawer-left view.active {
+  color: #ffc800;
+}
+
+.drawer-right {
+  height: 92.5vh;
+  float: right;
+  width: 65%;
+  background: #383e3e;
+  color: #ced3d4;
+}
+
+.drawer-right view text {}
+
+.drawer-right text.active {
+  background: #ffc800;
+  border-radius: 8rpx;
+  color: black;
+  display: inline-table;
+  height: 50rpx;
+  line-height: 50rpx;
+  padding: 0rpx 40rpx;
+}
+
+/* 选择右侧导航栏导航 */
+
+.demo-container-right {
+  background: #383e3e;
+}
+
+.drawer-left-right {
+  margin-top: 30rpx;
+}
+
+.drawer-left-right view {
+  margin-bottom: 56rpx;
+}
+
+.drawer-left-right view text {
+  border: 1px solid white;
+  display: block;
+  margin: 0 30rpx;
+  font-size: 26rpx;
+  text-align: center;
+  color: white;
+  border-radius: 6px;
+  height: 50rpx;
+  line-height: 50rpx;
+}
+
+.drawer-left-right view text.Check {}
+
+.drawer-left-right view text.CheckS {
+  background: #ffc800;
+  color: black;
+  border: 1px solid transparent;
+}
+
+/* 列表栏目 */
+
+.listWrapFather {
+  min-height: calc(100vh - 190rpx - 85rpx);
+  background: #232323;
+}
+
+.listWrap {
+  background: #232323;
+  color: #f6f6f3;
+  margin: 0 auto;
+  height: 320rpx;
+  padding: 15rpx 20rpx 0 20rpx;
+}
+
+.listWrapFather .listWrap:last-of-type {
+  padding: 15rpx 20rpx 15rpx 20rpx;
+}
+
+.list-items {
+  position: relative;
+  height: 320rpx;
+  margin: 0 auto;
+}
+
+.list-items image {
+  width: 100%;
+  border-radius: 2px;
+  height: 100%;
+  margin: 0 auto;
+}
+
+.list-detailInfo {
+  position: absolute;
+  bottom: 20rpx;
+  left: 20rpx;
+  right: 10rpx;
+}
+
+.list-items .h1Title {
+  font-size: 32rpx;
+  color: #fff;
+}
+
+.list-items .h2Title {
+  font-size: 22rpx;
+  margin-top: 10rpx;
+  color: #fff;
+}
+
+.like {
+  position: absolute;
+  top: 16rpx;
+  right: 0;
+}

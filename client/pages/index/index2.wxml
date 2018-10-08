@@ -1,0 +1,58 @@
+<!--index.wxml-->
+<view class="container">
+
+ <!-- 以下2个可以跳转 左上角返回按钮, 底部tabbar 没有了 :等价于 wx.navigateTo -->
+  <!-- 以下 navigator 调用该方法的页面【会】被加入堆栈 所以使用wx.navigateBack({delta:""})  【有】效-->
+<navigator   url="../addCgi/addCgi">页面跳转tabbar</navigator>
+<navigator   url="../mine/mine">页面跳转tabbar</navigator>
+
+<navigator open-type="navigate"  url="../movie/movie">navigate页面跳转movie</navigator>
+
+ <!-- 以下`1个可以跳转 左上角返  没有了按钮, 底部tabbar 没有了 -->
+ <!-- 以下 因为用了redirect 调用该方法的页面【不会】被加入堆栈 所以使用wx.navigateBack({delta:""}) 【无效】-->
+<navigator open-type="redirect"  url="../movie/movie">redirect页面跳movier</navigator>
+<!-- : wx.navigateTo 和 wx.redirectTo 不允许跳转到 tabbar 页面，只能用 wx.switchTab 跳转到 tabbar 页面 -->
+
+<view   bindtap="login111">111111111111111111111111111  </view> 
+
+<navigator url="https://www.baidu.com/" hover-class="navigator-hover">https://www.baidu.com/</navigator>
+
+
+ <web-view src="https://www.baidu.com/">/放心你没有看错就这么一行就行了</web-view>/
+    <!-- 用户登录测试 -->
+    <view class="userinfo" bindtap="login">
+        <image
+            class="userinfo-avatar"
+            src="{{logged ? userInfo.avatarUrl : './user-unlogin.png'}}"
+            background-size="cover"
+        ></image>
+        <view>
+            <text class="userinfo-nickname">{{logged ? userInfo.nickName : '点击测试登录接口'}}</text>
+            <text class="userinfo-nickname" wx:if="{{logged}}">{{userInfo.lastLoginTime}}</text>
+        </view>
+    </view>
+
+
+    <!-- 上传图片测试 -->
+    <view class="uploader">
+        <view class="uploader-text" bindtap="doUpload">
+            <text>上传图片</text>
+        </view>
+        <view class="uploader-container" wx:if="{{imgUrl}}">
+            <image
+                class="uploader-image"
+                src="{{imgUrl}}"
+                mode="aspectFit"
+                bindtap="previewImg"
+            ></image>
+        </view>
+    </view>
+
+
+    <!-- 上传图片测试 -->
+    <view class="uploader">
+        <navigator url="../addCgi/addCgi" open-type="navigate" class="uploader-text">
+            <text>快速增加 CGI</text>
+        </navigator>
+    </view>
+</view>

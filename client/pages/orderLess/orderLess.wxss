@@ -1,0 +1,114 @@
+#orderLess{
+    height: 100vh;
+    background:#1c1c1c; 
+}
+
+.header{
+    padding: 30rpx  78rpx 20rpx 78rpx;
+    background: #1c1c1c;
+    overflow: hidden;
+    height: 200rpx;
+}
+
+.headerLeft,.headerCenter,.headerRight{
+    width: 24%; 
+    height: 100%;
+    text-align: center;
+}
+
+.headerLeft{
+  float: left; 
+}
+
+.numberFc{
+    padding-top:26rpx;
+    display: block;
+    color:#FCC800;      
+    font-size: 65rpx;
+    
+}
+
+.color2d{
+    padding-top:15rpx; 
+    display: block; 
+    color:#eee ; 
+    font-size: 24rpx;
+}
+  
+.headerCenter{
+  float: left;
+  height: 100%;  
+  width: calc(100% - 24% - 24%); 
+}
+
+image{  
+    width: 200rpx;
+    height:200rpx; 
+}
+
+.headerRight{ 
+    float: right;   
+}  
+
+/* 预约记录 */
+.orderRecord{ 
+    padding:0 12rpx 2px 12rpx; 
+}
+
+.orderRecord-detailWrap{
+   
+    color:white; 
+    border:1px solid #FCC800;
+}
+
+.floatLeft{
+    float: left;
+    margin-left:20rpx
+}
+
+.floatRight{
+    float: right;
+    margin-right:20rpx;
+}
+
+.orderRecord-header{
+    height: 70rpx;
+    line-height: 70rpx;
+}
+
+.orderRecord-title{
+    height: 60rpx ;
+    line-height: 60rpx;
+    font-size: 30rpx;
+    color:#666;
+}
+
+.orderRecord-detail {
+    height: 185rpx;
+    display: flex;
+}
+
+.orderRecord-detail >text{
+    font-size: 25rpx; 
+    color:#ccc;
+    text-align: center;
+}
+
+.countWrap{
+    flex:0 1 131rpx;
+}
+
+
+.dataWrap{
+    flex:1 1 auto;
+    /* width: */
+}
+
+
+.timeWrap{
+    flex:0 1  210rpx;
+}
+
+.orderRecord-detail  .number{
+    font-size: 50rpx;  
+}

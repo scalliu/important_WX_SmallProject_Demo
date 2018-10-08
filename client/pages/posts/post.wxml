@@ -1,0 +1,143 @@
+<!-- <import src="/pages/posts/post-item/post-item-template.wxml" /> -->
+<view class="post">
+    <swiper catchtap="onSwiperTap" vertical="{{false}}" indicator-dots="true" autoplay="true" interval="2000" circular="true" indicator-color="rgba(0, 0, 0, .15)" indicator-active-color='#FFCF00'>
+        <swiper-item>
+            <image id="7" src="/images/home/lunbo0.png" data-postId="3"></image>
+        </swiper-item>
+        <swiper-item>
+            <image src="/images/home/lunbo1.png" data-postId="4"></image>
+        </swiper-item>
+        <swiper-item>
+            <image src="/images/home/lunbo2.png" data-postId="5"></image>
+        </swiper-item>
+    </swiper>
+
+    <!-- 选择区域 -->
+    <i-sticky scrollTop="{{scrollTop}}"  i-class="choiceWrap" >
+            <i-sticky-item  i-class="i-sticky-item-ab">
+            <!-- 置顶标题区域 -->
+            <view class="choiceTitle" slot="title"> 
+                        <view  i-class="toggleWrap" class="toggleWrap"  >
+                            <i-button bind:click="toggleLeft1Fn" class='toggleLeft' i-class='toggleLeftReset' data type="primary">
+                            
+                                {{town}}
+                                <i-icon type="unfold" color="#fff" class="toggle-icon" />
+                                <text class="px1px"></text>
+                            </i-button>
+                            <i-button bind:click="toggleRightFn" class='toggleRight' i-class='toggleRightReset' data type="primary">
+                                {{district}}
+                                <i-icon type="unfold" color="#fff" class="toggle-icon" />
+                            </i-button>
+                        </view>  
+            </view>
+            <!-- 列表栏目 置顶内容区域-->
+            <view  slot="content"  class="listWrapFather">
+                <block data="{{defaulta}}" dataKey="{{defaultakey}}">
+                    <view class="listWrap" wx:for="{{defaulta[defaultakey]}}" wx:key="index">
+                        <view class="list-items">
+                            <!-- <image src="/images/home/lunbo(1).png"></image> -->
+                            <image bindtap="dingwei" src="{{item.url}}"></image>
+                            <view class="list-detailInfo">
+                                <view class="h1Title">{{item.name}}</view>
+                                <view class="h2Title">{{item.info}}</view>
+                                <i-icon bindtap="toggleIconFn" class="like" data-flag="{{item.flag}}" data-index="{{index}}" data-like="{{item.checked}}" type="{{item.checked ? 'like_fill'  :'like'}}" size="28" color="{{item.checked ? '#F7C71A'  :'#fff'}}" />
+                            </view>
+                        </view>
+                    </view>
+                </block>
+            </view>
+
+        </i-sticky-item >
+    </i-sticky>
+
+
+
+
+
+        <!-- 选择左侧导航   左侧滑动 -->
+        <i-drawer mode="left" visible="{{showLeft1}}" bind:close="toggleLeft1Fn">
+            <view class="demo-container">
+                <view class="drawer-header">
+                    <text class="drawer-icon" style="background-image: url('../../images/home/drawer-icon.jpg')"></text>
+                    城市区域
+                </view>
+                <!-- <text class="viewpager-title {{current == 0 ? 'area-selected' : ''}}" bindtap="changeCurrent" data-current="0">{{provinceName}}</text> -->
+                <view class="drawer-left">
+                    <view   capture-catch:touchend="changeTabRight"    class='{{currentTab == 0? "active":""}}' data-current="0" capture-catch:touchend="changeTabStyle" data-town="深圳市">
+                        深圳市
+                    </view>
+                    <view class='{{currentTab ==1? "active":""}}' data-current="1" capture-catch:touchend="changeTabStyle" data-town="东莞市">
+                        东莞市
+                    </view>
+                    <view class='{{currentTab ==2? "active":""}}' data-cur rent="2" capture-catch:touchend="changeTabStyle" data-town="广州市">
+                        广州市
+                    </view>
+                    <view class='{{currentTab == 3? "active":""}}' data-current="3" capture-catch:touchend="changeTabStyle" data-town="武汉市">
+                        武汉市
+                    </view>
+                    <view class='{{currentTab == 4? "active":""}}' data-current="4" capture-catch:touchend="changeTabStyle" data-town="南京市">
+                        南京市
+                    </view>
+                    <view class='{{currentTab == 5? "active":""}}' data-current="5" capture-catch:touchend="changeTabStyle" data-town="北京市">
+                        北京市
+                    </view>
+                    <view class='{{currentTab == 6? "active":""}}' data-current="6" capture-catch:touchend="changeTabStyle" data-town="上海市">
+                        上海市
+                    </view>
+                </view>
+                <view class="drawer-right"  >
+                    <view capture-catch:touchend="toggleLeft1" data-current-content="0" data-district="全城" data-town="深圳市" data-flag="深圳市">
+                        <text class='{{currentContent == 0? "active":""}}'>全城</text>
+                    </view>
+                    <view capture-catch:touchend="toggleLeft1" data-current-content="1" data-district="南山区" data-town="深圳市"  data-flag="广州市">
+                        <text class='{{currentContent == 1? "active":""}}'>南山区</text>
+                    </view>
+                    <view capture-catch:touchend="toggleLeft1" data-current-content="2" data-district="福田区" data-town="深圳市"  data-flag="东莞市">
+                        <text class='{{currentContent == 2? "active":""}}'>福田区</text>
+                    </view>
+                    <view capture-catch:touchend="toggleLeft1" data-current-content="3" data-district="宝安区" data-town="深圳市"  data-flag="广州市">
+                        <text class='{{currentContent == 3? "active":""}}'>宝安区</text>
+                    </view>
+                    <view capture-catch:touchend="toggleLeft1" data-current-content="4" data-district="龙华区" data-town="深圳市"  data-flag="东莞市">
+                        <text class='{{currentContent == 4? "active":""}}'>龙华区</text>
+                    </view>
+                    <view capture-catch:touchend="toggleLeft1" data-current-content="5" data-district="盐田区" data-town="深圳市"  data-flag="深圳市">
+                        <text class='{{currentContent == 5? "active":""}}'>盐田区</text>
+                    </view>
+                </view>
+            </view>
+        </i-drawer>
+
+        <!-- 选择右侧导航   左侧滑动 -->
+          <i-drawer mode="left" visible="{{showRight}}" bind:close="toggleLeft2Fn">
+            <view class="demo-container demo-container-right">
+                <view class="drawer-header">
+                    <text class="drawer-icon" style="background-image: url('../../images/home/drawer-icon.jpg')"></text>
+                    门店主题
+                </view>
+                <!-- <text class="viewpager-title {{current == 0 ? 'area-selected' : ''}}" bindtap="changeCurrent" data-current="0">{{provinceName}}</text> -->
+                <view class="drawer-left-right">
+                    <view    capture-catch:touchend="changeTabRight"     data-current="0"  data-town="全部"   data-flag="广州市">
+                        <text   class='{{currentRight == 0? "CheckS":""}}'  >全部</text>
+                    </view>
+                    <view   capture-catch:touchend="changeTabRight"   data-current="1"  data-town="健身舱"   data-flag="东莞市">
+                        <text  class='{{currentRight == 1? "CheckS":""}}'>健身舱</text>
+                    </view>
+                    <view   capture-catch:touchend="changeTabRight"   data-current="2"  data-town="全能店"   data-flag="深圳市">
+                          <text  class='{{currentRight == 2? "CheckS":""}}'>全能店 </text>
+                    </view>
+                    <view   capture-catch:touchend="changeTabRight"     data-current="3"  data-town="瑜伽店"   data-flag="广州市">
+                          <text  class='{{currentRight == 3? "CheckS":""}}'>瑜伽店</text>
+                    </view>
+                    <view   capture-catch:touchend="changeTabRight"    data-current="4"  data-town="单车店"   data-flag="深圳市">
+                          <text  class='{{currentRight == 4? "CheckS":""}}'>单车店 </text>
+                    </view>
+                    <view   capture-catch:touchend="changeTabRight"      data-current="5"  data-town="亲子店"   data-flag="东莞市">
+                          <text  class='{{currentRight == 5? "CheckS":""}}'>亲子店</text>
+                    </view>
+                     
+                </view>
+                
+            </view>
+        </i-drawer>
+</view>

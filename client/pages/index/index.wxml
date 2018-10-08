@@ -1,0 +1,28 @@
+<!-- index.wxml -->
+<view class="container">
+    <block>
+        <view class="globe">方法1 :  getuserinfo</view>
+        <!-- <button open-type="getUserInfo" lang="zh_CN" bindgetuserinfo="onGotUserInfo">获取用户信息</button> -->
+    </block>
+
+    <!-- 授权窗口 -->
+    <view class="dialogFixedWrap"  hidden="{{isShowLoginDialog}}">
+        <view class="dialogWrap">
+            <view class="title">授权窗口</view>
+            <button size="mini" class="left" open-type="getUserInfo" lang="zh_CN" bindgetuserinfo="onGotUserInfo">
+                请点击授权
+            </button>
+            <button size="mini" class="right" catchTap='closeDialogWrap'>取消授权</button>
+        </view>
+    </view>
+
+    <!-- 用户登录测试 -->
+    <button open-type="openSetting" lang="zh_CN" bindopensetting="onOpenSetting">打开授权设置页</button>
+    <view class="userinfo" bindtap="login">
+        <image class="userinfo-avatar" src="{{logged ? userInfo.avatarUrl : './user-unlogin.png'}}" background-size="cover"></image>
+        <view>
+            <text class="userinfo-nickname">{{logged ? userInfo.nickName : '点击测试登录接口'}}</text>
+            <text class="userinfo-nickname" wx:if="{{logged}}">{{userInfo.lastLoginTime}}</text>
+        </view>
+    </view>
+</view>

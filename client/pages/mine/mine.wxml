@@ -1,0 +1,66 @@
+<!-- <import src="/pages/posts/post-item/post-item-template.wxml" /> -->
+<view>
+
+<!-- <button open-type="share"  bindshare="onshare">自定义分享按钮</button> -->
+    <!-- <view bindtap="showShareMenu">fenxiang 分享</view> -->
+    <!-- <button open-type="openSetting">打开授权设置页</button> -->
+    <view class="headerBg">
+         <view class="cardWrap">
+            <view class="avatarWrap">
+                <image src="{{avatarUrl}}" alt=""  class="avatar" />
+                 <text class="rightTitle">SUPERMONKEY</text>
+            </view> 
+            <view class="bottom">
+                 <view class="bottom-title">SUPER   LIFE   SUPER  ME</view>
+                 <view class="bottom-detail">
+                     <text class="floatLeft">开通超猩卡专项特权<text class="introductCard">查看特权</text></text>
+                     <text class="floatRight kaitong">开通</text> 
+                 </view>
+            </view>
+         </view>
+         <!-- 排名 -->
+         <view class="orderWrap">
+             <view class="order">
+                 <text class="floatLeft">SuperRank排名:</text>
+                 <text class="floatRight">查看猩球排名></text> 
+             </view>
+             <view class="order-center">
+                  开通超猩卡可查看,点此开通
+             </view>
+              <view class="training-time">
+                训练时0长分钟
+             </view>
+         </view> 
+    </view>
+
+     <view class="detail-itemsWrap">
+         <view class="items">
+            <view  class="floatLeft" >猩章  <text class="eee">开通超猩卡,方可查看</text></view>
+             <text  class="floatRight eee">0枚</text>
+        </view>
+         <view  class="items">
+             <view  class="floatLeft">代金券</view>
+             <text class="floatRight icon">></text>
+         </view>   
+         <view  class="items">
+               <view  class="floatLeft">我的赠送</view>
+                <text class="floatRight icon">></text>
+         </view>    
+
+    </view> 
+    
+    
+     <!-- 授权窗口 -->
+    <view class="dialogFixedWrap"  hidden="{{isShowLoginDialog}}">
+        <view class="dialogWrap">
+            <view class="title"  >授权窗口{{isShowLoginDialog}}123</view>
+            <button size="mini" class="left" open-type="getUserInfo" lang="zh_CN" bindgetuserinfo="onGotUserInfo">
+                请点击授权
+            </button>
+            <button size="mini" class="right" catchtap='closeDialogWrap'>取消授权1</button>
+        </view>
+    </view>
+
+
+
+</view>

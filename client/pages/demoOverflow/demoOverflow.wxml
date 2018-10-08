@@ -1,0 +1,87 @@
+<view  style="height:100%;background:skyblue;overflow:hidden; ">
+
+
+
+<view style="height:200%;background:white;overflow:hidden;position:absolute;">
+  <view>navigateTo  分割线</view>
+  <view class="drag_advertising">
+    <view class="mk">
+      <!-- <view>{{mealData}}</view> -->
+      <view class="mj" data-id="{{data.Id}}" wx:for="{{ProPackageList}}" bindtap="goProduct( )" bindtap="goProductPage" wx:for-index="index" wx:for-item="data" wx:key="index">
+        <view class="img">
+          <view class="img{{index}} imgIndex" style="background-image:url('./1.png') ;">
+            <view class="Name">{{data.Name}}</view>
+          </view>
+          <view class="PackageContent">{{data.PackageContent}}</view>
+        </view>
+      </view>
+    </view>
+  </view>
+  <view>redirectTo  分割线</view>
+  <view id="out" style="position:absolute;height:200px;overflow:scroll">
+    <view id="inner" style="">
+      <view>redirectTo</view>
+      <view>redirectTo</view>
+      <view>redirectTo</view>
+      <view>redirectTo</view>
+      <view>redirectTo</view>
+      <view>redirectTo</view>
+      <view>redirectTo</view>
+      <view>redirectTo</view>
+      <view>redirectTo</view>
+      <view>redirectTo</view>
+      <view>redirectTo</view>
+      <view>redirectTo</view>
+      <view>redirectTo</view>
+      <view>redirectTo</view>
+      <view>redirectTo</view>
+      <view>redirectTo</view>
+      <view>redirectTo</view>
+      <view>redirectTo</view>
+      <view>redirectTo</view>
+      <view>redirectTo</view>
+      <view>redirectTo</view>
+      <view>redirectTo</view>
+      <view>redirectTo</view>
+      <view>redirectTo</view>
+      <view>redirectTo</view>
+      <view>redirectTo</view>
+      <view>redirectTo</view>
+      <view>redirectTo</view>
+      <view>redirectTo</view>
+      <view>redirectTo</view>
+      <view>redirectTo</view>
+      <view>redirectTo</view>
+      <view>redirectTo</view>
+      <view>redirectTo</view>
+      <view>redirectTo</view>
+      <view>redirectTo</view>
+      <view>redirectTo</view>
+      <view>redirectTo</view>
+      <view>redirectTo</view>
+      <view>redirectTo</view>
+      <view>redirectTo</view>
+      <view>redirectTo</view>
+      <view>redirectTo</view>
+      <view>redirectTo</view>
+      <view>redirectTo</view>
+      <view>redirectTo</view>
+      <view>redirectTo</view>
+      <view>redirectTo</view>
+      <view>redirectTo</view>
+      <view>redirectTo</view>
+      <view>redirectTo</view>
+    </view>
+  </view>
+</view>
+
+
+
+
+
+
+
+
+
+
+</view>

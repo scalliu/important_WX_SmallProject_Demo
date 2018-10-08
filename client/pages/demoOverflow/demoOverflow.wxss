@@ -1,0 +1,77 @@
+page{
+    height: 100%;
+    overflow: hidden;
+}
+
+
+.mk {
+    width: 100%;
+    white-space: nowrap;
+}
+.mj {  
+    display: inline-block;
+    margin-left: 10rpx;
+    width:40%;
+}
+.mk .mj:nth-last-child(1){
+    margin-right: 0.13513513513513514rem;
+}
+.mj .img{
+    text-align: left;
+    width: 100%;
+    height: 100%;
+    background: #ffffff;
+    text-align: center;
+    border-radius: 0.05405405405405406rem;
+    overflow: hidden;
+    background-size: 100%;
+}
+
+.img>view.imgIndex{
+    background-size:inherit; 
+    width:100%;
+    font-weight: bold;
+    font-size: 28rpx;
+    height:120rpx ;
+    line-height: 120rpx ;
+}
+
+
+.mj .img  .img1{
+    
+    background-image: url("../../assets/images/home/h_tc2.png");
+}
+.mj .img  .img2{ 
+    background-image: url("../../assets/images/home/h_tc3.png");
+}
+
+
+
+.mj  Name{
+    font-weight: normal;
+    font-size:  0.373333rem;
+    color: white;
+    padding-top: 0.32rem;
+    padding-left: 0.266667rem;
+}
+.mj  .PackageContent{
+    display: block;
+    font-size: 24rpx;    
+    color: #333333;
+    overflow: hidden;
+    white-space: nowrap;
+}
+
+
+
+.drag_advertising {
+    width: 100%; 
+    overflow: auto;
+    overflow-y: hidden; 
+    margin-top: 0.32432432432432434rem;
+}
+.drag_advertising::-webkit-scrollbar{
+    /* //隐藏滚动条但可以滚动  */
+    display: none;
+}
+

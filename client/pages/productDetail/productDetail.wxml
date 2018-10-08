@@ -1,0 +1,102 @@
+<view id="productDetail">
+    <!-- 头部 tab选项卡 -->
+    <view class="tabButtonWrap bgWhite">
+        <view class="tabButton">
+            <view class="tabButton">
+                <view>
+                    <view data-tapId="0" bindtap="changeTabButton" class="{{index == 0 ? 'active' : ''}}">
+                        服务
+                    </view>
+                </view>
+                <view>
+                    <view data-tapId="1" bindtap="changeTabButton" class="{{index == 1 ? 'active' : ''}}">
+                        详情
+                    </view>
+                </view>
+                <view>
+                    <view data-tapId="2" bindtap="changeTabButton" class="{{index == 2 ? 'active' : ''}}">
+                        评价
+                    </view>
+                </view>
+            </view>
+        </view>
+    </view>
+    <!-- tab内容 -->
+    <!-- 第一个tab选项卡 -->
+    <view class="tabContentWrap" hidden="{{!(index == 0 )}}">
+        <view class="mainWrap bgWhite">
+            <view class="imageWrap">
+                <image src="https://manage.wqbol.com/Upload/images/0653c58d-47b3-4701-bb4c-0839abc1171d/182b1fb6-101a-4501-99b4-ea045292c847.jpg" />
+            </view>
+            <view class="productInformation">
+                <view class="product-title">初创型公司必备套餐</view>
+                <view class="product-property themeRed">深圳公司注册 +刻4章+小规模记账报税12个月</view>
+                <view class="product-price">
+                    <text class="nowPrice themeRed">¥2880.00</text>
+                    <text class="delect themeEEE">¥3500.00</text>
+                </view>
+            </view>
+            <view class="moreWrap">
+                <text class="themeEEE">促销</text>
+                <text class="themeRed borderRed marginL10 marginR10">\t套装\t</text>
+                <text class="   ">最高省10>元</text>
+                <text class="moreIcon  floatRight">....</text>
+            </view>
+        </view>
+        <!-- 评价 -->
+        <view class="evaluateWrap bgWhite">
+            <view class="evaluate">
+                <text class="floatLeft">评价(0)</text>
+                <view class="floatRight themeEEE">
+                    好评度
+                    <text class="themeRed">100%</text>
+                    >
+                </view>
+            </view>
+            <view class="common">暂无评论~</view>
+        </view>
+    </view>
+    <!-- 第二个tab选项卡 -->
+    <view class="tabContentWrap" hidden="{{!(index == 1 )}}">
+        <view class="mainWrap bgWhite">只是方一个图片</view>
+    </view>
+    <!-- 第三个tab选项卡 -->
+    <view class="tabContentWrap" hidden="{{!(index == 2 )}}">
+        <view class="mainWrap bgWhite">
+            <view class="imageWrap">
+                <image src="https://manage.wqbol.com/Upload/images/0653c58d-47b3-4701-bb4c-0839abc1171d/182b1fb6-101a-4501-99b4-ea045292c847.jpg" />
+            </view>
+        </view>
+    </view>
+    <!-- 星星评价 -->
+    <view class="comment1-description">
+        <view class="comment1-description1">描述相符</view>
+        <view class="star-pos">
+            <view class="lightStar  {{star1>=1? '': 'hideStar'}}" data-star="1" data-item="star1" bindtap="changeLightStar"></view>
+            <view class="lightStar  {{star1>=2? '': 'hideStar'}}" data-star="2" data-item="star1" bindtap="changeLightStar"></view>
+            <view class="lightStar  {{star1>=3? '': 'hideStar'}}" data-star="3" data-item="star1" bindtap="changeLightStar"></view>
+            <view class="lightStar  {{star1>=4? '': 'hideStar'}}" data-star="4" data-item="star1" bindtap="changeLightStar"></view>
+            <view class="lightStar  {{star1>=5? '': 'hideStar'}}" data-star="5" data-item="star1" bindtap="changeLightStar"></view>
+        </view>
+    </view>
+    <view class="comment1-description">
+        <view class="comment1-description1">服务态度</view>
+        <view class="star-pos">
+            <view class="lightStar  {{star2>=1? '': 'hideStar'}}" data-star="1" data-item="star2" bindtap="changeLightStar"></view>
+            <view class="lightStar  {{star2>=2? '': 'hideStar'}}" data-star="2" data-item="star2" bindtap="changeLightStar"></view>
+            <view class="lightStar  {{star2>=3? '': 'hideStar'}}" data-star="3" data-item="star2" bindtap="changeLightStar"></view>
+            <view class="lightStar  {{star2>=4? '': 'hideStar'}}" data-star="4" data-item="star2" bindtap="changeLightStar"></view>
+            <view class="lightStar  {{star2>=5? '': 'hideStar'}}" data-star="5" data-item="star2" bindtap="changeLightStar"></view>
+        </view>
+    </view>
+    <view class="comment1-description">
+        <view class="comment1-description1">物流评分</view>
+        <view class="star-pos">
+            <view class="lightStar  {{star3>=1? '': 'hideStar'}}" data-star="1" data-item="star3" bindtap="changeLightStar"></view>
+            <view class="lightStar  {{star3>=2? '': 'hideStar'}}" data-star="2" data-item="star3" bindtap="changeLightStar"></view>
+            <view class="lightStar  {{star3>=3? '': 'hideStar'}}" data-star="3" data-item="star3" bindtap="changeLightStar"></view>
+            <view class="lightStar  {{star3>=4? '': 'hideStar'}}" data-star="4" data-item="star3" bindtap="changeLightStar"></view>
+            <view class="lightStar  {{star3>=5? '': 'hideStar'}}" data-star="5" data-item="star3" bindtap="changeLightStar"></view>
+        </view>
+    </view>
+</view>

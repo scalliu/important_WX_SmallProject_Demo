@@ -1,0 +1,58 @@
+<view id="orderLess">
+    <!-- 我的预约 -->
+    <!-- <button open-type="openSetting">打开授权设置页</button> -->
+    
+    <!-- 预约用户信息 -->
+    <view class="header">
+        <view class="headerLeft">
+            <span class="numberFc">0</span>
+            <span class="color2d">累计天数</span> 
+        </view>
+        <view class="headerCenter">
+             <image  src="./aaaa.png" />
+        </view>
+         <view class="headerRight">
+            <span  class="numberFc">0</span>
+            <span  class="color2d">累计训练/次</span> 
+        </view>
+    </view>
+
+    <!-- 预约记录 -->
+    <view class="orderRecord"  
+    style="background-image:url(../../static/img/beijing.png);background-repeat:no-repeat;background-size:102% 100%;"
+    >
+        <view  class="orderRecord-title">预约记录</view>
+        <view class="orderRecord-detailWrap">
+            <view class="orderRecord-header" >
+                <text class="floatLeft">SUPERMONKEY</text>
+                <text class="floatRight">本月</text> 
+            </view>
+            <view class="orderRecord-detail" >
+                <text class="countWrap"> 
+                    训练次数\n<text class="number">0</text> 
+                </text>
+                 <text class="dataWrap"> 
+                    训练天数\n<text class="number">0</text>
+                </text>
+                 <text class="timeWrap"> 
+                    训练市场/分钟\n<text class="number">0</text>
+                </text> 
+            </view>
+        </view>
+    </view>
+
+       <!-- 授权窗口 -->
+    <!-- <view class="dialogFixedWrap"  hidden="{{isShowLoginDialog}}">
+        <view class="dialogWrap">
+            <view class="title">授权窗口</view>
+            <button size="mini" class="left" open-type="getUserInfo" lang="zh_CN" bindgetuserinfo="onGotUserInfo">
+                请点击授权
+            </button>
+            <button size="mini" class="right" catchTap='closeDialogWrap'>取消授权</button>
+        </view>
+    </view> -->
+
+
+
+
+</view>

@@ -1,0 +1,15 @@
+{ 
+  "component": true,
+  "usingComponents": {
+    "i-drawer": "../../dist/drawer/index",
+    "i-button": "../../dist/button/index",
+    "i-icon": "../../dist/icon/index",
+    "i-sticky": "../../dist/sticky/index",
+    "i-sticky-item": "../../dist/sticky-item/index"
+  },
+  "backgroundColor": "#000000",
+  "backgroundTextStyle": "white",
+  "navigationBarBackgroundColor": "#000000",
+  "navigationBarTitleText": "超猩卡",
+  "navigationBarTextStyle": "white"
+}

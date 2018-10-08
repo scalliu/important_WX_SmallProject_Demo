@@ -1,0 +1,33 @@
+<!-- index.wxml -->
+<import src="./audio-list/audio-item-template.wxml" />
+<view class="post-container">
+    <view>
+        <swiper circular='true' vertical="true" indicator-dots="true" autoplay="false" style="width :100%;height:420rpx">
+            <block wx:for="{{postList}}" wx:key="index">
+                <swiper-item>
+                    <image src="{{item.headImgSrc}}" class="slide-image" style="width :100%;" />
+                </swiper-item>
+            </block>
+        </swiper>
+    </view>
+
+
+
+    <!-- 主体template承载区 -->
+    <block  wx:for='{{postList}}' wx:for-item="item" wx:for-index="idx" wx:key="idx">
+        <view  class="post-detail"  bindtap='goDetail'   data-postId="{{item.postId}}" >
+            <template    is="msgItem" data='{{item}}'></template>
+        </view>
+    </block>
+
+
+ 
+    <!-- /主体template承载区 -->
+    <!--  -->
+    
+    <!-- <block class="post-detail" wx:for='{{postList}}' wx:for-item="item" wx:for-index="idx"   wx:key="idx">
+            <view catchtap="onPostTap" data-postId="{{item.postId}}">
+                <template is="msgItem" data="{{item}}"/>
+            </view>
+        </block> -->
+</view>

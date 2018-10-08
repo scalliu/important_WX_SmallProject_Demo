@@ -1,0 +1,152 @@
+
+page{
+  background: #3e3e3e; 
+}
+
+.headerBg{
+  padding:25rpx 25rpx 0rpx 25rpx;
+  background: #434343     ;
+  position: relative;
+  height: 500rpx;
+  box-sizing: border-box;
+}
+
+
+.cardWrap{
+  border-radius: 10rpx;
+  padding:25rpx  20rpx 0rpx;
+  height: 355rpx;
+  border:1px solid  #666;
+}
+
+.avatarWrap{
+  height:195rpx;
+   
+}
+
+.avatar{
+  float:left;
+  height: 140rpx;
+  width: 140rpx; 
+  border-radius:50%;
+}
+
+.rightTitle{
+  float: right;
+  font-size: 40rpx;
+  color:#fff;
+}
+
+.bottom-title{
+  letter-spacing:14rpx;
+  height: 44rpx;
+  font-size:35rpx;
+  color:#fff; 
+  line-height: 44rpx;text-align: center;
+}
+
+.bottom-detail{
+  font-size:40rpx;
+  height: 95rpx;
+  line-height: 95rpx;
+  color:#fff;
+}
+
+
+ 
+
+.floatLeft{
+  float: left;
+  font-size:32rpx;  
+}
+
+.introductCard{
+  font-size:32rpx; 
+  
+  text-decoration:underline;
+}
+
+.floatRight{
+  float: right; 
+}
+
+.kaitong{
+  font-size:30rpx;  
+  margin-top:28rpx;
+  border:1px solid #ffe200;
+  height:40rpx ;
+  line-height: 40rpx;
+  text-align: center;
+  width: 110rpx;
+  color:#ffe200;
+}
+
+/* 排名 */
+.orderWrap{
+  border-radius: 10rpx;
+  bottom:-60rpx;
+  position: absolute;
+   padding:17rpx 17rpx ;
+   width: 700rpx;
+   margin: 0 auto;
+   box-sizing: border-box;
+   background: black;
+}
+
+.order{
+  color: #fff;
+  overflow: hidden;
+  font-size: 25rpx;
+}
+
+.order-center{
+  color:#ffe200;
+  text-align: center; 
+  font-size: 25rpx;
+   height: 34rpx;
+   line-height: 34rpx;
+}
+
+.training-time{
+  font-size: 25rpx; 
+  height: 28rpx;
+  line-height: 28rpx;
+  color:#fff; 
+  text-align: center;  
+}
+
+
+/* 列表 */
+.detail-itemsWrap{
+  padding-top:60rpx;
+  padding: 60rpx 0rpx  0 20rpx;
+}
+
+.detail-itemsWrap .items{
+  height: 114rpx;
+  font-size: 26rpx;
+  line-height: 114rpx;
+  padding-right: 40rpx;
+  border-bottom: 1px solid #ccc;
+}
+
+
+.detail-itemsWrap .items{
+   color:#fff
+}
+
+.eee{
+  color:#ccc ;
+  font-size: 22rpx;
+}
+
+
+/* 授权弹窗 */
+.dialogFixedWrap{
+  background: #fff;
+  position: fixed;
+  top:50vh; 
+  margin: 0 auto;
+  left:50%;
+  transform:translate3d(-50%,-50%,0)
+}

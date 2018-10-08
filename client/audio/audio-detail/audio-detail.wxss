@@ -1,0 +1,89 @@
+.audio{
+    position: relative;
+}
+.audio-detail {
+    font-size: 24rpx;
+}
+.audio-detail .audioWrap{
+  width: 100%;
+}
+.audio-detail .audio{
+    /* width: 100%; */
+    width: 102rpx;
+    height: 110rpx;
+    z-index: 90;
+    position: absolute;
+    top: 240rpx;
+    left:50%;
+    transform:translate(-50%,-50%) ;
+    
+    /* height:480rpx; */
+
+
+  }
+.audio-detail-avatarWrap {
+    overflow: hidden;
+    height: 40rpx;
+    line-height: 40rpx;
+}
+.audio-detail-title{
+    font-size: 40rpx;
+}
+.audio-detail-avatar {
+    float: left;
+    height: 32rpx;
+    width: 32rpx;
+    margin-top: 4rpx;
+    margin-right: 8px;
+    vertical-align: middle;
+}
+
+.audio-detail-text {
+    float: left;
+    vertical-align: middle;
+    margin-right: 20px;
+}
+
+.audio-detail-circle-img {
+    overflow: hidden;
+    margin-top: 20rpx;
+}
+
+.audio-detail-circle-img image {
+    width: 90rpx;
+    height: 90rpx;
+    float: right;
+    margin-right: 20rpx;
+}
+
+#shareImageWrap {
+    display: inline;
+    float: right;
+    background:transparent; 
+    border: 0px solid red;
+}
+
+#shareImageWrap::after {
+    border: none;
+}
+
+.horizon {
+    width: 660rpx;
+    height: 1px;
+    background-color: #e5e5e5;
+    vertical-align: middle;
+    position: relative;
+    top: -46rpx;
+    margin: 0 auto;
+    z-index: -99;
+}
+
+.audio-detail-content {
+    display: inline-block;
+    color: #666;
+    margin-left: 30rpx;
+    margin-top: 30rpx;
+    margin-right: 30rpx;
+    line-height: 44rpx;
+    letter-spacing: 2px;
+}
