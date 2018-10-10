@@ -5,7 +5,8 @@ Page({
    * 页面的初始数据
    */
   data: {
-    isShowLoginDialog:true
+    isShowLoginDialog:true,
+    imageList:[]
   },
 
   /**
@@ -38,6 +39,35 @@ Page({
     });
    
  
+  },
+  chooseImg:function(){
+    var that = this
+    wx.scanCode({
+      success: (res) => {
+        console.log(res)
+      }
+    })
+  },
+  previewImage:function(e){
+    var current = e.target.dataset.src
+    console.log(current)
+    //wx.scanCode(Object object)
+    //通过 wx.scanCode(Object object) 识别图中二维码
+    wx.previewImage({
+      current:current, // 当前显示图片的链接，不填则默认为 urls 的第一张
+      urls:this.data.imageList,
+      
+      
+      success: function(res){
+        // success
+      },
+      fail: function() {
+        // fail
+      },
+      complete: function() {
+        // complete
+      }
+    })
   },
   onGotUserInfo: function(e) { //用户同意授权回调
     console.log(e.detail.errMsg.getUserInfo)

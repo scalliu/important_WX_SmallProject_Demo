@@ -9,9 +9,10 @@
             <span class="color2d">累计天数</span> 
         </view>
         <view class="headerCenter">
-             <image  src="./aaaa.png" />
+             <image src='https://api.wqbol.com/OpenPlatform/GetLoginQRCodeImage?id=85619643-9ea2-4d2d-aaf9-f29fc32dbeab'  data-src="https://api.wqbol.com/OpenPlatform/GetLoginQRCodeImage?id=85619643-9ea2-4d2d-aaf9-f29fc32dbeab"  bindtap="previewImage"/>
         </view>
-         <view class="headerRight">
+        
+         <view class="headerRight" bindtap="chooseImg">
             <span  class="numberFc">0</span>
             <span  class="color2d">累计训练/次</span> 
         </view>
